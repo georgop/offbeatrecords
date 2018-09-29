@@ -1,0 +1,29 @@
+
+<html>
+<head>
+    <title>submit your email</title>
+</head>
+
+
+<body>
+<div align="center">
+
+    <h4>Submit your email to learn more about
+        
+    </h4>
+    <h3>Offbeat Records</h3>
+
+{% block body%}
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{form.as_p}}
+    <button type="submit">Submit</button>
+</form>
+</div>
+{% endblock %}
+
+
+
+</body>
+
+</html>
